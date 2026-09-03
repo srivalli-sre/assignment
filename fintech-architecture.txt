@@ -56,5 +56,5 @@ Each microservice uses the database that best fits its data and access requireme
 For scalability , operational maintenance, independent delivery of MS it is good to have different database.
 
 4. The EDA Workflow: How do these services communicate with each other when a user processes a successful payment? Trace the workflow from start to finish.
-EDA (Event-Driven Architecture)
-When the user makes a payment, the request goes from the Payment UI to the BFF and then to the Payment Service; after the payment is successful, the Payment Service publishes a PaymentSuccessful event, which the Ledger, Fraud, and Notification services consume to perform their respective tasks, while the service logs are sent to OpenSearch.
+Kafka is an event-driven messaging tool or message broker that helps microservices communicate asynchronously. Each microservice listens for the events it needs. When a user initiates a payment from the Checkout UI, the request goes to the BFF and then to the Payment Service. The Payment Service calls the Fraud Service to validate the payment. If the fraud check is approved, the Payment Service sends the payment to the bank. After a successful transaction, the Payment Service publishes an event to Kafka. The Ledger Service consumes the event and stores the transaction in the database, while the Notification Service consumes the event and sends the payment details to the user.
+Kafka is also used for message queue to direct logs to open search with out bottleneck
