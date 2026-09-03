@@ -30,6 +30,13 @@ Notification Microservice – Handles emails, messages, and other notifications.
 C. Data Layer
 This layer is part of the backend and is responsible for storing and managing application data used by the microservices.
 
+DBs used :
+Ledger – MySQL for structured transaction/accounting data; Amazon S3 for receipts.
+Payment – MySQL for structured payment data; Valkey for fast, in-memory/cached payment data.
+Fraud Service – Neo4j for graph/relationship data; Amazon S3 for files/large datasets; Valkey for fast, in-memory/cached fraud-related data.
+Notification – MongoDB for NoSQL, document-based notification data.
+OpenSearch – Used for centralized log storage, indexing, searching, and analysis.
+
 Questions in assignment:
 1. The Product Layers: What are the different layers and what is the main job of each layer?
 Our product follows a microservices architecture with a frontend layer and a backend layer. 
@@ -46,5 +53,6 @@ Fraud Microservice – Uses ML to identify potentially fraudulent transactions.
 Notification Microservice – Handles emails, messages, and other notifications.
 
 3. The Database: Why does each microservice use a different type of database? Explain why we need MySQL, Valkey, Neo4j, and MongoDB for their specific tasks.
+Each microservice uses the database that best fits its data and access requirements. MySQL is used for structured transactional data, Valkey is used for high-speed in-memory access and caching, Neo4j is used for relationship-based graph data in fraud detection, and MongoDB is used for flexible document-based data. This allows each microservice to use the right technology for its specific workload.
 
 4. The EDA Workflow: How do these services communicate with each other when a user processes a successful payment? Trace the workflow from start to finish.
