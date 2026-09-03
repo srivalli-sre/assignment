@@ -1,4 +1,4 @@
-I have not really worked on fintech product. How I can relate this to my work?
+I have not really worked on fintech product. How I can relate this to my work and include in my resume?
 
 Following details are as per class
 
@@ -7,7 +7,6 @@ The frontend consists of the Merchant and Payment UIs. The backend is further di
 The BFF aggregates data from different microservices and serves it to the frontend. 
 The Application layer contains core services such as Ledger, Payment, Fraud, and Notification. 
 The Data layer is also part of the backend and is responsible for storing and managing application data.
-
 
 Product Architecture in detail:
 Our product follows a microservices architecture, where the application is divided into multiple layers.
@@ -56,3 +55,5 @@ Notification Microservice – Handles emails, messages, and other notifications.
 Each microservice uses the database that best fits its data and access requirements. MySQL is used for structured transactional data, Valkey is used for high-speed in-memory access and caching, Neo4j is used for relationship-based graph data in fraud detection, and MongoDB is used for flexible document-based data. This allows each microservice to use the right technology for its specific workload.
 
 4. The EDA Workflow: How do these services communicate with each other when a user processes a successful payment? Trace the workflow from start to finish.
+EDA (Event-Driven Architecture)
+When the user makes a payment, the request goes from the Payment UI to the BFF and then to the Payment Service; after the payment is successful, the Payment Service publishes a PaymentSuccessful event, which the Ledger, Fraud, and Notification services consume to perform their respective tasks, while the service logs are sent to OpenSearch.
