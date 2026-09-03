@@ -1,0 +1,50 @@
+I have not really worked on fintech product. How I can relate this to my work?
+
+Following details are as per class
+
+Our product follows a microservices architecture with a frontend layer and a backend layer. 
+The frontend consists of the Merchant and Payment UIs. The backend is further divided into the BFF, Application, and Data layers. 
+The BFF aggregates data from different microservices and serves it to the frontend. 
+The Application layer contains core services such as Ledger, Payment, Fraud, and Notification. 
+The Data layer is also part of the backend and is responsible for storing and managing application data.
+
+
+Product Architecture in detail:
+Our product follows a microservices architecture, where the application is divided into multiple layers.
+1. Frontend Layer
+This layer contains the user interfaces:
+Merchant UI
+Payment UI
+2. Backend Layer
+The backend consists of three main areas: BFF, Application, and Data layers.
+A. BFF (Backend for Frontend) Layer
+Acts as an intermediary between the frontend and backend services.
+Aggregates data from multiple microservices and presents it in a format suitable for the UI.
+It can directly communicate with the Payment Microservice to retrieve transaction status quickly.
+B. Application Layer
+This layer contains the core business microservices:
+Ledger Microservice – Maintains accounting and transaction information, such as payment amounts and order details.
+Payment Microservice – Processes payments and communicates with external banking/payment systems.
+Fraud Microservice – Uses ML to identify potentially fraudulent transactions.
+Notification Microservice – Handles emails, messages, and other notifications.
+C. Data Layer
+This layer is part of the backend and is responsible for storing and managing application data used by the microservices.
+
+Questions in assignment:
+1. The Product Layers: What are the different layers and what is the main job of each layer?
+Our product follows a microservices architecture with a frontend layer and a backend layer. 
+The frontend consists of the Merchant and Payment UIs. The backend is further divided into the BFF, Application, and Data layers. 
+The BFF aggregates data from different microservices and serves it to the frontend. 
+The Application layer contains core services such as Ledger, Payment, Fraud, and Notification. 
+The Data layer is also part of the backend and is responsible for storing and managing application data.
+
+2. The Microservices: What are the different services and what it actually do?
+This layer contains the core business microservices:
+Ledger Microservice – Maintains accounting and transaction information, such as payment amounts and order details.
+Payment Microservice – Processes payments and communicates with external banking/payment systems.
+Fraud Microservice – Uses ML to identify potentially fraudulent transactions.
+Notification Microservice – Handles emails, messages, and other notifications.
+
+3. The Database: Why does each microservice use a different type of database? Explain why we need MySQL, Valkey, Neo4j, and MongoDB for their specific tasks.
+
+4. The EDA Workflow: How do these services communicate with each other when a user processes a successful payment? Trace the workflow from start to finish.
