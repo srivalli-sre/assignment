@@ -5,7 +5,8 @@ managing day-to-day backup operations. Over the years, I’ve worked with differ
 
 Tools Used
 -----------
-
+openSearch - to store application logs, troubleshooting and debugging
+valkey - caching server for quick response using cache memory 
 
 AWS Services Used
 -----------------
