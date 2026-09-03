@@ -53,6 +53,7 @@ Notification Microservice – Handles emails, messages, and other notifications.
 
 3. The Database: Why does each microservice use a different type of database? Explain why we need MySQL, Valkey, Neo4j, and MongoDB for their specific tasks.
 Each microservice uses the database that best fits its data and access requirements. MySQL is used for structured transactional data, Valkey is used for high-speed in-memory access and caching, Neo4j is used for relationship-based graph data in fraud detection, and MongoDB is used for flexible document-based data. This allows each microservice to use the right technology for its specific workload.
+For scalability , operational maintenance, independent delivery of MS it is good to have different database.
 
 4. The EDA Workflow: How do these services communicate with each other when a user processes a successful payment? Trace the workflow from start to finish.
 EDA (Event-Driven Architecture)
