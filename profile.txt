@@ -1,2 +1,17 @@
+Self Introduction
+-----------------
+Hi, my name is Srivalli.  I have more than 15 years of experience in infrastructure automation, production support, and SRE. I started my career as a Backup Administrator in 2006, managing day-to-day backup operations. Over the years, I’ve worked with different organizations including Bank of America, HP, CSC, and most recently JPMorgan Chase, where I worked as an SRE.  
+
 Tools Used
 -----------
+
+
+AWS Services Used
+-----------------
+
+
+Roles played in the organization (What is the pbm, how did you fix, acheivement)
+-------------------------------
+
+
+
