@@ -1,7 +1,7 @@
 1. The core Terraform workflow:
 The core Terraform workflow is inti, plan and destroy. First, when we run terraform init, to initialize the working directoy and download providers. Then terraform plan which desired state with current state and review infra changes. If plan looks correct, we run terraform apply to create or update the infrastrucure. when infra no longer needed, we run terraform destroy.
 ~/main.tf file - user define the provider, variables, and resources for desired state
-~/terraform.tfstate file - current infra state created by terraform
+~/terraform.tfstate file - current infra state created by terraform - terraform show cmd
 
 2. Terraform Development lifecycle: Explain the branching strategy, how code gets developed, tested and promoted main.
 
